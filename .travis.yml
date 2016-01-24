@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '4'
+- stable
+notifications:
+  email: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
+    on_start: never
+    on_failure: change
+deploy:
+  provider: npm
+  email: jimmy.aumard@gmail.com
+  api_key:
+    secure: ganIPTs8wR4UBNMWvqrs0c6H/dB/6BWUVeLFg8BVOL7YOhq0kpwHTYW0b10v14kQ8PF90P0St6i2g37axIrHRbHDxIRpp7lVSuvmVIbVJ3zp6EBHD8cDx5jkXrgTWU3hiB3p0RNay/2XVIqEZFIz1QldLDNfFGzahAO81LIEVGLOlX9MtpDdLB0FCvZNSxXHuKskKFZ32uOxudVz96AcZ8rzOrX6bltf6Id69+4BNS1mm13m/1v8fgh8+52lHgCqXV5M7YgzCj4YSm5lPkWhr1YvS12ovNCwLSOoCA6vlKBOr/Z+hwtDIdp9xbgNacEBLpHfZCXzyhQi/v0eFdFqc0PfiKjNBvIgNbwG543PPjl3p9drwnxQnJ+1rThAS0n43eudGhXT+XZUZ/3P9ikLPQdFQctl/F/zu/TEbEBm43ycTcB1qRDr8iDA3QnEKnVOaKcCOY8vSu8K0vdc7jFmHgHCmwzvCrz/lNqwuqFXtLqgrAhQ3pLsljWk0zch3h8BLfm7RW6tu56ZquYSMRtRpWdawaN79ORpjfbCF/MBUPFj4tH4HVvaZ3nnK25VUJUj0oheEJ7i3Y5U+700/kM2dTDaNMSIGZFOS3qx1UL4poN1RqcPGJwRUkTOgBawx9l35RO4R1kluoKZ2Qboi8DEqVZqqyw2iAuDJwaYF/T7rLc=
+  on:
+    tags: true
+    repo: jaumard/trailpack-cron
+    all_branches: true
+    node: stable

@@ -1,0 +1,51 @@
+{
+  "name": "trailpack-cron",
+  "version": "0.0.1",
+  "description": "Add Trails service for running cron tasks",
+  "homepage": "https://github.com/jaumard/trailpack-cron",
+  "author": {
+    "name": "Jimmy Aumard",
+    "email": "jimmy.aumard@gmail.com",
+    "url": "https://github.com/jaumard"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "trailpack",
+    "trails",
+    "trailjs",
+    "cron",
+    "crontab",
+    "schedule"
+  ],
+  "dependencies": {
+    "cron": "^1.1.0",
+    "trailpack": "^0.0.21",
+    "trails-service": "^1.0.0-alpha-1"
+  },
+  "devDependencies": {
+    "eslint": "^2.0.0-beta.2",
+    "eslint-config-trails": "^1.0.1",
+    "lodash": "^4.0.0",
+    "mocha": "^2.3.4",
+    "smokesignals": "^1.0.2",
+    "trailpack-core": "^1.0.0-alpha-3",
+    "trails": "^1.0.0-alpha-6"
+  },
+  "bundledDependencies": [
+    "trailpack"
+  ],
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "https://github.com/jaumard/trailpack-cron",
+  "license": "MIT"
+}
