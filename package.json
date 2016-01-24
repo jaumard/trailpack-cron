@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "cron": "^1.1.0",
-    "trailpack": "^0.0.21",
+    "trailpack": "0.0.21",
     "trails-service": "^1.0.0-alpha-1"
   },
   "devDependencies": {
