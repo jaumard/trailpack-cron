@@ -28,7 +28,7 @@
   "devDependencies": {
     "eslint": "^2.0.0-beta.2",
     "eslint-config-trails": "^1.0.1",
-    "lodash": "^3.10.1",
+    "lodash": "^4.0.1",
     "mocha": "^2.3.4",
     "smokesignals": "^1.0.2",
     "trailpack-core": "^1.0.0-alpha-3",
