@@ -1,6 +1,7 @@
 # trailpack-cron
 [![Gitter][gitter-image]][gitter-url]
 [![NPM version][npm-image]][npm-url]
+[![NPM downloads][npm-download]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
@@ -65,6 +66,7 @@ this.app.services.CronService.addJob('mySecondJob', {
 
 [npm-image]: https://img.shields.io/npm/v/trailpack-cron.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/trailpack-cron
+[npm-download]: https://img.shields.io/npm/dt/trailpack-cron.svg
 [ci-image]: https://travis-ci.org/jaumard/trailpack-cron.svg?branch=master
 [ci-url]: https://travis-ci.org/jaumard/trailpack-cron
 [daviddm-image]: http://img.shields.io/david/jaumard/trailpack-cron.svg?style=flat-square
