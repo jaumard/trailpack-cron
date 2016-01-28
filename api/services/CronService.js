@@ -11,11 +11,11 @@ module.exports = class CronService extends Service {
 
   init() {
     const config = this.app.config.cron
-    const jobs = Object.keys(config)
+    const jobs = Object.keys(config.jobs)
     this.jobs = {}
 
     jobs.forEach(job => {
-      this.addJob(job, config[job])
+      this.addJob(job, config.jobs[job])
     })
   }
 
@@ -36,7 +36,7 @@ module.exports = class CronService extends Service {
         }
       },
       typeof job.start === 'boolean' ? job.start : true,
-      job.timezone,
+      job.timezone || this.app.config.cron.defaultTimeZone,
       job.context
     )
   }

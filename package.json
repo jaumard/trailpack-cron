@@ -9,7 +9,10 @@
     "url": "https://github.com/jaumard"
   },
   "files": [
-    "lib"
+    "lib",
+    "annotations",
+    "archetype",
+    "api"
   ],
   "main": "index.js",
   "keywords": [
@@ -32,6 +35,7 @@
     "lodash": "^4.0.1",
     "mocha": "^2.3.4",
     "smokesignals": "^1.0.2",
+    "trailpack-annotations": "0.0.8",
     "trailpack-core": "^1.0.0-alpha-3",
     "trails": "^1.0.0-alpha-6"
   },

@@ -1,3 +1,5 @@
+'use strict'
+
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
 
@@ -7,19 +9,31 @@ const App = {
     version: '1.0.0'
   },
   config: {
+    api:{
+      services:{
+        DefaultService: require('./api/services/DefaultService')
+      }
+    },
+    annotations:{
+      pathToScan: __dirname+'/api',
+      customAnnotations: require('../annotations')
+    },
     cron: {
-      myJob: {
-        schedule: '* * * * * *',
-        onTick: function (app) {
-          app.log.info('I am triggering every second');
-        },
-        context: 'test'
+      defaultTimeZone: 'Europe/Paris', // Default timezone use for tasks
+      jobs: {
+        myJob: {
+          schedule: '* * * * * *',
+          onTick: function (app) {
+            app.log.info('I am triggering every second');
+          }
+        }
       }
     },
     main: {
       packs: [
         smokesignals.Trailpack,
         require('trailpack-core'),
+        require('trailpack-annotations'),
         require('../') // trailpack-cron
       ]
     }
