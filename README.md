@@ -39,6 +39,40 @@ module.exports = {
 }
 ```
 
+### Annotation
+You can use `Cron` annotation on methods services, for this you need to install [trailpack-annotations](https://github.com/jaumard/trailpack-annotations) : 
+After install just add your annotations : 
+
+```
+'use strict'
+
+const Service = require('trails-service')
+
+/**
+ * @module DefaultService
+ *
+ * @description Default Service included with a new Trails app
+ * @see {@link http://trailsjs.io/doc/api/services}
+ * @this TrailsApp
+ */
+module.exports = class DefaultService extends Service {
+
+  /**
+   * @Cron('* * * * * *')
+   */
+  hello(){
+    this.app.log.info('Run every second :)')
+  }
+  /**
+   * @Cron({schedule: '* * * * * *', start: true, timezone: 'Europe/Paris'})
+   */
+  world(){
+    this.app.log.info('Run every second too :)')
+  }
+}
+
+```
+
 ## Usage
 Now you can send start/stop jobs like this : 
 
