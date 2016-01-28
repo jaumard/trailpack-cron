@@ -12,9 +12,9 @@ module.exports = class CronTrailpack extends Trailpack {
       if (!configAnnotations.customAnnotations) {
         configAnnotations.customAnnotations = {}
       }
-      else {
-        configAnnotations.customAnnotations = _.extend(configAnnotations.customAnnotations, require('./annotations'))
-      }
+
+      configAnnotations.customAnnotations = _.extend(configAnnotations.customAnnotations, require('./annotations'))
+
 
     }
   }
