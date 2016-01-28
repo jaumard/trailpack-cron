@@ -1,8 +1,6 @@
 'use strict'
 
 const Trailpack = require('trailpack')
-const _ = require('lodash')
-
 
 module.exports = class CronTrailpack extends Trailpack {
 
