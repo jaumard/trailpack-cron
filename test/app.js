@@ -9,14 +9,13 @@ const App = {
     version: '1.0.0'
   },
   config: {
-    api:{
-      services:{
+    api: {
+      services: {
         DefaultService: require('./api/services/DefaultService')
       }
     },
-    annotations:{
-      pathToScan: __dirname+'/api',
-      customAnnotations: require('../annotations')
+    annotations: {
+      pathToScan: __dirname + '/api'
     },
     cron: {
       defaultTimeZone: 'Europe/Paris', // Default timezone use for tasks

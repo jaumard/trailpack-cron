@@ -10,6 +10,6 @@ describe('CronService', () => {
   it('should have one job', () => {
     assert(global.app.services['CronService'].jobs)
     assert(global.app.services['CronService'].jobs.myJob)
-    assert(global.app.services['CronService'].jobs.DefaultServicetest)
+    //assert(global.app.services['CronService'].jobs.DefaultServicetest)
   })
 })
