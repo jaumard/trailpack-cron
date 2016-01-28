@@ -25,6 +25,7 @@
   ],
   "dependencies": {
     "cron": "^1.1.0",
+    "ecmas-annotations": "^0.3.1",
     "trailpack": "^1.0.0-alpha-2",
     "trails": "^1.0.0-alpha-7",
     "trails-service": "^1.0.0-alpha-1"

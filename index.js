@@ -6,19 +6,6 @@ const _ = require('lodash')
 
 module.exports = class CronTrailpack extends Trailpack {
 
-  configure() {
-    const configAnnotations = this.app.config.annotations
-    if (configAnnotations) {
-      if (!configAnnotations.customAnnotations) {
-        configAnnotations.customAnnotations = {}
-      }
-
-      configAnnotations.customAnnotations = _.extend(configAnnotations.customAnnotations, require('./annotations'))
-
-
-    }
-  }
-
   /**
    * Wait Trails ready event to launch jobs
    */
