@@ -45,11 +45,9 @@ module.exports = class Cron extends Annotation {
     }
 
     if (_.isObject(annotation.value)) {
-      //app.services.CronService.addJob(annotation.className+annotation.target, _.extends(defaults, annotation.value))
       cron.jobs[annotation.className + annotation.target] = _.extend(defaults, annotation.value)
     }
     else {
-      //app.services.CronService.addJob(annotation.className+annotation.target, defaults)
       cron.jobs[annotation.className + annotation.target] = defaults
     }
   }
