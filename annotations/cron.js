@@ -35,7 +35,7 @@ module.exports = class Cron extends Annotation {
     const defaults = {
       schedule: annotation.value,
       onTick: function (app) {
-        const service = app.services[annotation.className + annotation.target]
+        const service = app.services[annotation.className]
         if (service) {
           service[annotation.target]()
         }
