@@ -11,6 +11,7 @@
   "files": [
     "lib",
     "annotations",
+    "config",
     "archetype",
     "api"
   ],
