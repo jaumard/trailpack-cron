@@ -27,19 +27,18 @@
   "dependencies": {
     "cron": "^1.1.0",
     "ecmas-annotations": "^0.3.1",
-    "trailpack": "^1.0.0-alpha-2",
-    "trails": "^1.0.0-alpha-7",
-    "trails-service": "^1.0.0-alpha-1"
+    "trailpack": "^1.0.0-beta-3",
+    "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
-    "eslint": "^2.0.0-beta.2",
-    "eslint-config-trails": "^1.0.1",
-    "lodash": "^4.0.1",
-    "mocha": "^2.3.4",
+    "eslint": "^2.1.0",
+    "eslint-config-trails": "^1.0.4",
+    "lodash": "^4.5.0",
+    "mocha": "^2.4.5",
     "smokesignals": "^1.0.2",
     "trailpack-annotations": "0.0.9",
-    "trailpack-core": "^1.0.0-alpha-3",
-    "trails": "^1.0.0-alpha-6"
+    "trailpack-core": "^1.0.0-alpha-4",
+    "trails": "^1.0.0-beta-1"
   },
   "bundledDependencies": [
     "trailpack"
