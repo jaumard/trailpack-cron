@@ -5,7 +5,7 @@ module.exports = class DefaultService{
    * @Cron("* * * * * *")
    */
   test(){
-    this.app.log.info('I am triggering every second from annotation!');
+    this.app.log.info('I am triggering every second from annotation!')
   }
 
   /**
@@ -14,6 +14,6 @@ module.exports = class DefaultService{
    * })
    */
   testObj(){
-    this.app.log.info('I am triggering every second from annotation!');
+    this.app.log.info('I am triggering every second from annotation!')
   }
 }

@@ -22,8 +22,8 @@ const App = {
       jobs: {
         myJob: {
           schedule: '* * * * * *',
-          onTick: function (app) {
-            app.log.info('I am triggering every second');
+          onTick: app => {
+            app.log.info('I am triggering every second')
           }
         }
       }

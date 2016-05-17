@@ -11,11 +11,11 @@ module.exports = {
   jobs: {
     myJob: {
       schedule: '* * * * * *',
-      onTick: function (app) {
-        app.log.info('I am ticking');
+      onTick: app => {
+        app.log.info('I am ticking')
       },
-      onComplete: function (app) {
-        app.log.info('I am done');
+      onComplete: app => {
+        app.log.info('I am done')
       },
       start: true, // Start task immediately
       timezone: 'Europe/Paris' // Custom timezone
