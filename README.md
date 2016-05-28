@@ -21,6 +21,22 @@ With npm (you will have to create config file manually) :
 `npm install --save trailpack-cron`
 
 ## Configuration
+First you need to add this trailpack to your __main__ configuratio : 
+```js
+// config/main.js
+
+module.exports = {
+   ...
+
+   packs: [
+      ...
+      require('trailpack-cron'),
+      ...
+   ]
+   ...
+}
+```
+
 Static jobs can be added on config/cronjs` :
 ```js
 // config/cron.js
