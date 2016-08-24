@@ -18,5 +18,4 @@ deploy:
   on:
     tags: true
     repo: jaumard/trailpack-cron
-    all_branches: true
     node: 6
