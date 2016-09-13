@@ -12,18 +12,18 @@ module.exports = class CronService extends Service {
   init() {
     /* Detect if Redis Exist */
     this.clusterServer = false
-    let cronJob = false
-    if(this.app.config.caches && this.app.config.caches.stores){
+    let cronJobService = false
+    if (this.app.config.caches && this.app.config.caches.stores){
       this.clusterServer = _.find(this.app.config.caches.stores, {
         type: 'redis'
       })
     }
-    if(this.clusterServer){
-      const redis = require('redis').createClient(cacheConfig)
-      cronJob = require('cron-cluster')(redis).CronJob
+    if (this.clusterServer){
+      const redis = require('redis').createClient(this.clusterServer)
+      cronJobService = require('cron-cluster')(redis).CronJob
     }
     else {
-      cronJob = require('cron').CronJob
+      cronJobService = require('cron').CronJob
     }
 
     const config = this.app.config.cron
@@ -31,15 +31,15 @@ module.exports = class CronService extends Service {
     this.jobs = {}
 
     jobs.forEach(job => {
-      this.addJob(job, config.jobs[job], cronJob)
+      this.addJob(job, config.jobs[job], cronJobService)
     })
   }
 
-  addJob(name, job, service) {
+  addJob(name, job, CronJobService) {
     if (this.jobs[name]) {
       this.jobs[name].stop()
     }
-    this.jobs[name] = new service(
+    this.jobs[name] = new CronJobService(
       job.schedule,
       () => {
         if (job.onTick) {
