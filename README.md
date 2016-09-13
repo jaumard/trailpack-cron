@@ -111,6 +111,10 @@ this.app.services.CronService.addJob('mySecondJob', {
   })
 ```
 
+## Cluster Mode
+For use in a Cluster Mode for preventing the jobs running on all server. Only one server of the cluster be run a job in a distributively form.
+You only need install the [trailpack-cache](https://github.com/trailsjs/trailpack-cache) and configure a redis server.
+
 ## License
 [MIT](https://github.com/jaumard/trailpack-cron/blob/master/LICENSE)
 

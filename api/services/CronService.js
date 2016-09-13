@@ -1,7 +1,7 @@
 'use strict'
 
 const Service = require('trails-service')
-const CronJob = require('cron').CronJob
+const _ = require('lodash')
 
 /**
  * @module CronService
@@ -10,20 +10,36 @@ const CronJob = require('cron').CronJob
 module.exports = class CronService extends Service {
 
   init() {
+    /* Detect if Redis Exist */
+    this.clusterServer = false
+    let cronJob = false
+    if(this.app.config.caches && this.app.config.caches.stores){
+      this.clusterServer = _.find(this.app.config.caches.stores, {
+        type: 'redis'
+      })
+    }
+    if(this.clusterServer){
+      const redis = require('redis').createClient(cacheConfig)
+      cronJob = require('cron-cluster')(redis).CronJob
+    }
+    else {
+      cronJob = require('cron').CronJob
+    }
+
     const config = this.app.config.cron
     const jobs = Object.keys(config.jobs)
     this.jobs = {}
 
     jobs.forEach(job => {
-      this.addJob(job, config.jobs[job])
+      this.addJob(job, config.jobs[job], cronJob)
     })
   }
 
-  addJob(name, job) {
+  addJob(name, job, service) {
     if (this.jobs[name]) {
       this.jobs[name].stop()
     }
-    this.jobs[name] = new CronJob(
+    this.jobs[name] = new service(
       job.schedule,
       () => {
         if (job.onTick) {
