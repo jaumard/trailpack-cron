@@ -28,17 +28,17 @@
     "cron": "^1.1.0",
     "cron-cluster": "^1.0.0",
     "ecmas-annotations": "^1.0.2",
-    "trailpack": "^1.0.2",
+    "trailpack": "^1.0.5",
     "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
-    "eslint": "^3.2.2",
+    "eslint": "^3.5.0",
     "eslint-config-trails": "^1.0.7",
-    "lodash": "^4.13.1",
+    "lodash": "^4.15.0",
     "mocha": "^3.0.2",
     "smokesignals": "^1.2.2",
-    "trailpack-annotations": "^1.0.0",
-    "trailpack-core": "^1.0.0",
+    "trailpack-annotations": "^1.1.0",
+    "trailpack-core": "^1.0.1",
     "trails": "^1.0.4"
   },
   "bundledDependencies": [
