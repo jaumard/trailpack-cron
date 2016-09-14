@@ -25,9 +25,9 @@
     "schedule"
   ],
   "dependencies": {
+    "cron": "^1.1.0",
     "cron-cluster": "^1.0.0",
     "ecmas-annotations": "^1.0.2",
-    "lodash": "^4.15.0",
     "trailpack": "^1.0.2",
     "trails-service": "^1.0.0-beta-2"
   },
