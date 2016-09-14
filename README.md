@@ -41,17 +41,19 @@ Static jobs can be added on config/cronjs` :
 ```js
 // config/cron.js
 module.exports = {
-  myJob: {
-    schedule: '* * * * * *',
-    onTick: function (app) {
-      app.log.info('I am ticking every second');
-    },
-    onComplete: function (app) {
-      app.log.info('I am done');
-    },
-    start: true, // Start task immediately
-    timezone: 'France/Paris' // Custom timezone
-  }
+  jobs: {
+    myJob: {
+      schedule: '* * * * * *',
+      onTick: function (app) {
+        app.log.info('I am ticking every second');
+      },
+      onComplete: function (app) {
+        app.log.info('I am done');
+      },
+      start: true, // Start task immediately
+      timezone: 'France/Paris' // Custom timezone
+    }
+  }  
 }
 ```
 
@@ -110,6 +112,38 @@ this.app.services.CronService.addJob('mySecondJob', {
     timezone: 'France/Paris' // Custom timezone
   })
 ```
+
+## Cluster Mode (Redis Support)
+For use in a Cluster Mode for preventing the jobs running on all server.
+Only one server of the cluster be run a job in a distributively form.
+You only need configure a redis server in the cron.js config file.
+
+```js
+// config/cron.js
+module.exports = {
+  cluster: {      
+    host: 'localhost',
+    auth_pass: ''
+    db: 0,
+    ttl: 600 // Default TTL
+  },
+  jobs: {
+    myJob: {
+      schedule: '* * * * * *',
+      onTick: function (app) {
+        app.log.info('I am ticking every second');
+      },
+      onComplete: function (app) {
+        app.log.info('I am done');
+      },
+      start: true, // Start task immediately
+      timezone: 'France/Paris' // Custom timezone
+    }
+  }  
+}
+```
+
+For advanced options for the Redis Client take a look here: [Node Redis Client Options](https://github.com/NodeRedis/node_redis#options-object-properties)
 
 ## License
 [MIT](https://github.com/jaumard/trailpack-cron/blob/master/LICENSE)
