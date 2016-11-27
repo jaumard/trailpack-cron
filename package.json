@@ -28,7 +28,7 @@
     "cron": "^1.1.0",
     "cron-cluster": "^1.0.0",
     "ecmas-annotations": "^1.0.2",
-    "trailpack": "^1.0.5",
+    "trailpack": "^2.0.2",
     "trails-service": "^1.0.0-beta-2"
   },
   "devDependencies": {
