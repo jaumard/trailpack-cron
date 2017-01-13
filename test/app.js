@@ -30,8 +30,6 @@ const App = {
     },
     main: {
       packs: [
-        smokesignals.Trailpack,
-        require('trailpack-core'),
         require('trailpack-annotations'),
         require('../') // trailpack-cron
       ]
