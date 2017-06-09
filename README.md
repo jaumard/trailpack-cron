@@ -61,6 +61,16 @@ module.exports = {
 
 ### Annotation
 You can use `Cron` annotation on methods services, for this you need to install [trailpack-annotations](https://github.com/jaumard/trailpack-annotations) : 
+Ensure path for annotations is set appropriately:
+
+```
+// config/annotations.js
+module.exports = {
+  ...
+  pathToScan: './api/services', //or ./api for hmvc
+  ...
+}
+```
 After install just add your annotations : 
 
 ```
