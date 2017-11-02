@@ -28,7 +28,7 @@
     "cron": "^1.2.1",
     "cron-cluster": "^1.0.0",
     "ecmas-annotations": "^1.0.2",
-    "trailpack": "^2.1.0"
+    "trailpack": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^3.13.1",
