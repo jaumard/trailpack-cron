@@ -34,7 +34,7 @@
     "eslint": "^3.13.1",
     "eslint-config-trails": "^2.0.6",
     "lodash": "^4.17.4",
-    "mocha": "^3.2.0",
+    "mocha": "^6.0.0",
     "smokesignals": "^2.1.1",
     "trailpack-annotations": "^2.0.0",
     "trails": "^2.0.1"
