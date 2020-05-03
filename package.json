@@ -28,7 +28,8 @@
     "cron": "^1.2.1",
     "cron-cluster": "^1.0.0",
     "ecmas-annotations": "^1.0.2",
-    "trailpack": "^2.1.0"
+    "trailpack": "^2.1.0",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "eslint": "^3.13.1",
@@ -40,7 +41,9 @@
     "trails": "^2.0.1"
   },
   "scripts": {
-    "test": "eslint --fix . && mocha"
+    "test": "eslint --fix . && mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">= 4.0.0"
@@ -49,5 +52,6 @@
     "extends": "trails"
   },
   "repository": "https://github.com/jaumard/trailpack-cron",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
